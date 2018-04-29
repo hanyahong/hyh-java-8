@@ -26,7 +26,7 @@ public class AClass {
     }
 
     /**
-     * 排序旧版写法
+     * java 8 函数式编程写法
      */
     public void sort_2() {
 
