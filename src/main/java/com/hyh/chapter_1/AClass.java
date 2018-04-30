@@ -1,5 +1,7 @@
 package com.hyh.chapter_1;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -11,6 +13,11 @@ import java.util.List;
  * @Description:
  */
 public class AClass {
+    @Test
+    public void testMain() {
+        sort();
+        sort_2();
+    }
 
     /**
      * 排序旧版写法
@@ -22,6 +29,7 @@ public class AClass {
                 return o1.getAge().compareTo(o2.getAge());
             }
         });
+        System.out.println(createDemoList().iterator().next().getAge() + "------" + createDemoList().iterator().next().getName());
 
     }
 
@@ -30,7 +38,9 @@ public class AClass {
      */
     public void sort_2() {
 
-       createDemoList().sort(Comparator.comparing(Pig::getAge));
+        createDemoList().sort(Comparator.comparing(Pig::getAge));
+        System.out.println(createDemoList().iterator().next().getAge() + "------" + createDemoList().iterator().next().getName());
+
     }
 
     /**
@@ -46,11 +56,11 @@ public class AClass {
         pig.setColor("red");
         x.add(pig);
         pig.setName("B");
-        pig.setAge(10);
+        pig.setAge(3);
         pig.setColor("blank");
         x.add(pig);
         pig.setName("C");
-        pig.setAge(10);
+        pig.setAge(2);
         pig.setColor("yellow");
         x.add(pig);
         return x;
